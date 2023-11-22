@@ -1,5 +1,6 @@
 import java.time.LocalTime;
 import java.util.HashMap;
+import java.util.Map;
 
 public class ControlCancion {
     private HashMap<String, Cancion>canciones;
@@ -54,4 +55,12 @@ public class ControlCancion {
             return false;
         }
     }
+
+    public String consultarCancionesXAlbum(String nombreAlbum){
+        String cancionesXAlbum="";
+        for (Map.Entry<String, Cancion> entry : this.canciones.entrySet()) {
+            cancionesXAlbum += entry.getValue().toString();
+        }
+            return cancionesXAlbum;
+        }
 }
