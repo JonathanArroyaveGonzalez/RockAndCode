@@ -37,4 +37,28 @@ public class Miembro {
         listaInstrumentos.add(instrumento);
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Miembro [cedula=" + cedula + ", nombre=" + nombre + ", direccion=" + direccion + ", listaRoles="
+                + getInfoRoles() + ", listaInstrumentos=" + getInfoInstrumentos() + "]";
+    }
+
+    public String getInfoRoles() {
+        String roles = "";
+        for (Rol rol : listaRoles) {
+            roles += " " + rol + " ";
+        }
+        return roles;
+    }
+
+    public String getInfoInstrumentos() {
+        String instrumentos = "";
+        for (Instrumento instrumento : listaInstrumentos) {
+            instrumentos += " " + instrumento + " ";
+        }
+        return instrumentos;
+    }
+
+
 }

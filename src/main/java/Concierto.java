@@ -30,7 +30,4 @@ public class Concierto {
                 + ", capacidad=" + capacidad + ", codigo=" + codigo + "]";
     }
 
-
-
-
 }
