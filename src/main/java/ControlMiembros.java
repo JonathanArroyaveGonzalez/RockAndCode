@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Descripcion de la Clase
@@ -84,4 +85,14 @@ public class ControlMiembros {
         return true;
     }
 
+    @Override
+    public String toString() {
+        String integrantes="";
+        for (Map.Entry<String,Miembro> entry : this.miembros.entrySet()) {
+            integrantes += entry.getValue().toString();
+        }
+        return integrantes;
+    }
+
 }
+
