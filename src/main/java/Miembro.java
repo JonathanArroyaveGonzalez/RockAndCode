@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,12 +11,30 @@ public class Miembro {
     private String cedula;
     private String nombre;
     private String direccion;
-    private List<String> listaRoles;
-    private List<String> listaInstrumentos;
+    private List<Rol> listaRoles;
+    private List<Instrumento> listaInstrumentos;
 
     public Miembro(String cedula, String nombre, String direccion) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.direccion = direccion;
+        this.listaRoles = new ArrayList<>();
+        this.listaInstrumentos = new ArrayList<>();
+    }
+
+    public boolean agregarRol(Rol rol) {
+        if (listaRoles.contains(rol)) {
+            return false;
+        }
+        listaRoles.add(rol);
+        return true;
+    }
+
+    public boolean agregarInstrumento(Instrumento instrumento) {
+        if (listaInstrumentos.contains(instrumento)) {
+            return false;
+        }
+        listaInstrumentos.add(instrumento);
+        return true;
     }
 }
