@@ -40,8 +40,8 @@ public class Miembro {
 
     @Override
     public String toString() {
-        return "Miembro [cedula=" + cedula + ", nombre=" + nombre + ", direccion=" + direccion + ", listaRoles="
-                + getInfoRoles() + ", listaInstrumentos=" + getInfoInstrumentos() + "]";
+        return "Nombre: " + nombre+"\nCedula: " + cedula  + "\nDireccion: " + direccion + "\nRoles: "
+                + getInfoRoles() + "\nInstrumentos: " + getInfoInstrumentos() ;
     }
 
     public String getInfoRoles() {

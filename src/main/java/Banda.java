@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ private List<String> fotos;
     public Banda() {
         this.genero = "ROCK";
         this.fechaCreacion = "21/11/2023";
-        this.fotos = null;
+        this.fotos = new ArrayList<>();
     }
 
     public void setGenero(String genero) {
@@ -28,6 +29,7 @@ private List<String> fotos;
     public void agregarFoto(String rutaFoto) {
         this.fotos.add(rutaFoto);
     }
+
 
     @Override
     public String toString() {

@@ -11,7 +11,7 @@ public class ControlAlbum {
     private HashMap<String,Album> listaAlbunes;
 
     public ControlAlbum() {
-        this.listaAlbunes = null;
+        this.listaAlbunes = new HashMap<String, Album>();
     }
 
     public boolean agregarAlbum(String nombre, LocalDate fecha){

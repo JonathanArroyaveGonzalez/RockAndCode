@@ -26,8 +26,8 @@ public class Concierto {
 
     @Override
     public String toString() {
-        return "Concierto [nombre=" + nombre + ", lugar=" + lugar + ", fecha=" + fecha + ", hora=" + hora
-                + ", capacidad=" + capacidad + ", codigo=" + codigo + "]";
+        return "\nNombre: " + nombre + "\nLugar: " + lugar + "\nFecha: " + fecha + "\nHora: " + hora
+                + "\nCapacidad: " + capacidad + "\nCodigo: " + codigo ;
     }
 
 }

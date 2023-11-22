@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.HashMap;
 
 public class ControlConcierto {
@@ -7,10 +9,20 @@ public class ControlConcierto {
         this.conciertos = new HashMap<>();
     }
 
+    public boolean programarConcierto(String nombre, String lugar, LocalDate fecha, LocalTime hora, int capacidad, String codigo) {
+
+        if (conciertos.containsKey(codigo)) {
+            return false;
+        }
+        Concierto nuevoConcierto = new Concierto(nombre, lugar, fecha, hora, capacidad, codigo);
+        conciertos.put(codigo, nuevoConcierto);
+        return true;
+    }
+
     public String consultarConciertos() {
         String conciertosInfo = "";
         for (Concierto concierto : conciertos.values()) {
-            conciertosInfo += "\\n" + concierto.toString();
+            conciertosInfo +=concierto.toString();
         }
         return conciertosInfo;
     }
