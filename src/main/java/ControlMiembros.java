@@ -59,4 +59,29 @@ public class ControlMiembros {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((miembros == null) ? 0 : miembros.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ControlMiembros other = (ControlMiembros) obj;
+        if (miembros == null) {
+            if (other.miembros != null)
+                return false;
+        } else if (!miembros.equals(other.miembros))
+            return false;
+        return true;
+    }
+
 }
