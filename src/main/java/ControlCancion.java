@@ -34,6 +34,14 @@ public class ControlCancion {
         return true;
     }
 
+    /**
+     * Agrega una nueva canción al controlador de canciones.
+     *
+     * @param nombre El nombre de la canción.
+     * @param duracion La duración de la canción.
+     * @param nombreAlbum El nombre del álbum al que pertenece la canción.
+     * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
+     */
     public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
         Cancion nuevaCancion= new Cancion(nombre,duracion,nombreAlbum);
         this.canciones.put(nombre,nuevaCancion);
@@ -44,7 +52,12 @@ public class ControlCancion {
             return false;
         }
     }
-
+    /**
+     * Elimina una canción del controlador de canciones.
+     *
+     * @param nombre El nombre de la canción a eliminar.
+     * @return true si la canción se eliminó con éxito, false si la canción no existe en el controlador.
+     */
     public boolean eliminarCancion(String nombre) {
 
         if(this.canciones.get(nombre)!=null) {
@@ -55,7 +68,12 @@ public class ControlCancion {
             return false;
         }
     }
-
+    /**
+     * Consulta las canciones asociadas a un álbum en el controlador de canciones.
+     *
+     * @param nombreAlbum El nombre del álbum.
+     * @return Una cadena de texto que representa las canciones del álbum, o una cadena vacía si no hay canciones para el álbum.
+     */
     public String consultarCancionesXAlbum(String nombreAlbum){
         String cancionesXAlbum="";
         for (Map.Entry<String, Cancion> entry : this.canciones.entrySet()) {

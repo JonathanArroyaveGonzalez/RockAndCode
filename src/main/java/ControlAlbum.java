@@ -14,6 +14,13 @@ public class ControlAlbum {
         this.listaAlbunes = new HashMap<String, Album>();
     }
 
+    /**
+     * Agrega un nuevo álbum al controlador de álbumes.
+     *
+     * @param nombre El nombre del álbum.
+     * @param fecha La fecha de lanzamiento del álbum.
+     * @return true si el álbum se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe un álbum con el mismo nombre).
+     */
     public boolean agregarAlbum(String nombre, LocalDate fecha){
         Album nuevoAlbum= new Album(nombre,fecha);
         this.listaAlbunes.put(nombre,nuevoAlbum);

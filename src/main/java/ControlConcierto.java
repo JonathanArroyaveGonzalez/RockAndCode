@@ -8,7 +8,17 @@ public class ControlConcierto {
     ControlConcierto() {
         this.conciertos = new HashMap<>();
     }
-
+    /**
+     * Programa un nuevo concierto y lo agrega al controlador de conciertos.
+     *
+     * @param nombre El nombre del concierto.
+     * @param lugar El lugar del concierto.
+     * @param fecha La fecha del concierto.
+     * @param hora La hora del concierto.
+     * @param capacidad La capacidad del lugar del concierto.
+     * @param codigo El código único del concierto.
+     * @return true si el concierto se programó con éxito, false si ya existe un concierto con el mismo código.
+     */
     public boolean programarConcierto(String nombre, String lugar, LocalDate fecha, LocalTime hora, int capacidad, String codigo) {
 
         if (conciertos.containsKey(codigo)) {
@@ -18,7 +28,11 @@ public class ControlConcierto {
         conciertos.put(codigo, nuevoConcierto);
         return true;
     }
-
+    /**
+     * Consulta la información de todos los conciertos programados.
+     *
+     * @return Una cadena de texto que representa la información de todos los conciertos programados.
+     */
     public String consultarConciertos() {
         String conciertosInfo = "";
         for (Concierto concierto : conciertos.values()) {
