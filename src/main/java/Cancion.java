@@ -9,9 +9,9 @@ import java.time.LocalTime;
 public class Cancion {
     private String nombre;
     private LocalTime duracion;
-    private Album album;
+    private String album;
 
-    public Cancion(String nombre, LocalTime duracion, Album album) {
+    public Cancion(String nombre, LocalTime duracion, String album) {
         this.nombre = nombre;
         this.duracion = duracion;
         this.album = album;

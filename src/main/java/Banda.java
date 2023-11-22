@@ -11,9 +11,9 @@ private String genero;
 private String fechaCreacion;
 private List<String> fotos;
 
-    public Banda(String genero, String fechaCreacion) {
-        this.genero = genero;
-        this.fechaCreacion = fechaCreacion;
+    public Banda() {
+        this.genero = "ROCK";
+        this.fechaCreacion = "21/11/2023";
         this.fotos = null;
     }
 

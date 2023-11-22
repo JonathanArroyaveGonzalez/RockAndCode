@@ -1,3 +1,4 @@
+import java.time.LocalTime;
 import java.util.HashMap;
 
 public class ControlCancion {
@@ -32,11 +33,25 @@ public class ControlCancion {
         return true;
     }
 
-    public boolean agregarCancion(String nombre, float duracion, String nombreAlbum) {
-        return true;
+    public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
+        Cancion nuevaCancion= new Cancion(nombre,duracion,nombreAlbum);
+        this.canciones.put(nombre,nuevaCancion);
+
+        if(this.canciones.get(nombre)!=null){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public boolean eliminarCancion(String nombre) {
-        return true;
+
+        if(this.canciones.get(nombre)!=null) {
+            this.canciones.remove(nombre);
+            return true;
+        }else
+        {
+            return false;
+        }
     }
 }
