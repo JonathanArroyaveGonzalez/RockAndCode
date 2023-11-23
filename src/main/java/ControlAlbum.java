@@ -32,6 +32,17 @@ public class ControlAlbum {
         }
     }
 
+    /**
+     * Consulta un álbum en el controlador por su nombre.
+     *
+     * @param nombreAlbum El nombre del álbum a consultar.
+     * @return El objeto Album correspondiente al nombre proporcionado, o null si no se encuentra.
+     */
+    public Album consultarAlbum(String nombreAlbum) {
+        return this.listaAlbunes.get(nombreAlbum);
+    }
+
+
     @Override
     public int hashCode() {
         final int prime = 31;

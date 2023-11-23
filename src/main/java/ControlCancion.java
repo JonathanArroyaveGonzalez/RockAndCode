@@ -43,6 +43,7 @@ public class ControlCancion {
      * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
      */
     public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
+
         Cancion nuevaCancion= new Cancion(nombre,duracion,nombreAlbum);
         this.canciones.put(nombre,nuevaCancion);
 
