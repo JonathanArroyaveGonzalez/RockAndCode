@@ -34,8 +34,14 @@ public class ControlAlbum {
      * @param nombreAlbum El nombre del álbum a consultar.
      * @return El objeto Album correspondiente al nombre proporcionado, o null si no se encuentra.
      */
-    public Album consultarAlbum(String nombreAlbum) {
-        return this.listaAlbunes.get(nombreAlbum);
+    public boolean consultarAlbum(String nombreAlbum) {
+        Album albumBuscado=this.listaAlbunes.get(nombreAlbum);
+        if(albumBuscado instanceof Album){
+            return true;
+        }else
+        {
+            return false;
+        }
     }
 
 
