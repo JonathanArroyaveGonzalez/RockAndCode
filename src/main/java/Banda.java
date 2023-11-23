@@ -35,6 +35,7 @@ private List<String> fotos;
     public String toString() {
         return "Informacion Rock&Code: \n" +
                 "Genero: " + genero + "\n" +
-                "Fecha de creacion: " + fechaCreacion + "\n";
+                "Fecha de creacion: " + fechaCreacion + "\n"+
+                "Fotos: "+ fotos.toString();
     }
 }
