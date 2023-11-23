@@ -6,7 +6,7 @@ public class ControlCancion {
     private HashMap<String, Cancion>canciones;
 
     ControlCancion() {
-        this.canciones = new HashMap<String, Cancion>();
+        this.canciones = new HashMap<>();
     }
 
     @Override
@@ -43,15 +43,9 @@ public class ControlCancion {
      * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
      */
     public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
-
-        Cancion nuevaCancion= new Cancion(nombre,duracion,nombreAlbum);
-        this.canciones.put(nombre,nuevaCancion);
-
-        if(this.canciones.get(nombre)!=null){
-            return true;
-        }else{
-            return false;
-        }
+        Cancion nuevaCancion = new Cancion(nombre, duracion, nombreAlbum);
+        this.canciones.put(nombre, nuevaCancion);
+        return this.canciones.get(nombre) != null;
     }
     /**
      * Elimina una canción del controlador de canciones.

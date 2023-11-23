@@ -63,10 +63,7 @@ public class ControlMiembros {
      */
     public boolean agregarInstrumento(String cedula, Instrumento instrumento) {
         Miembro miembro = buscarMiembro(cedula);
-        if (miembro instanceof Miembro) {
-            return miembro.agregarInstrumento(instrumento);
-        }
-        return false;
+        return miembro instanceof Miembro && miembro.agregarInstrumento(instrumento);
     }
     /**
      * Agrega un rol a un miembro existente en el controlador de miembros.
@@ -113,6 +110,7 @@ public class ControlMiembros {
         String integrantes="";
         for (Map.Entry<String,Miembro> entry : this.miembros.entrySet()) {
             integrantes += entry.getValue().toString();
+            integrantes += "\n";
         }
         return integrantes;
     }

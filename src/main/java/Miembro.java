@@ -14,7 +14,7 @@ public class Miembro {
     private List<Rol> listaRoles;
     private List<Instrumento> listaInstrumentos;
 
-    public Miembro(String cedula, String nombre, String direccion) {
+    public Miembro(String nombre, String cedula, String direccion) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.direccion = direccion;

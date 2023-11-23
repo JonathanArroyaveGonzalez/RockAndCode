@@ -28,4 +28,9 @@ public class Album {
     public int hashCode() {
         return Objects.hash(nombre);
     }
+
+    @Override
+    public String toString() {
+        return "Album [nombre=" + nombre + ", fecha=" + fecha + "]";
+    }
 }

@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Descripcion de la Clase
@@ -11,7 +12,7 @@ public class ControlAlbum {
     private HashMap<String,Album> listaAlbunes;
 
     public ControlAlbum() {
-        this.listaAlbunes = new HashMap<String, Album>();
+        this.listaAlbunes = new HashMap<>();
     }
 
     /**
@@ -23,13 +24,8 @@ public class ControlAlbum {
      */
     public boolean agregarAlbum(String nombre, LocalDate fecha){
         Album nuevoAlbum= new Album(nombre,fecha);
-        this.listaAlbunes.put(nombre,nuevoAlbum);
-
-        if (this.listaAlbunes.get(nombre)!= null){
-            return true;
-        }else{
-            return false;
-        }
+        this.listaAlbunes.put(nombre, nuevoAlbum);
+        return this.listaAlbunes.get(nombre) != null;
     }
 
     /**
@@ -66,5 +62,15 @@ public class ControlAlbum {
         } else if (!listaAlbunes.equals(other.listaAlbunes))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        String albunes="";
+        for (Map.Entry<String,Album> entry : this.listaAlbunes.entrySet()) {
+            albunes += entry.getValue().toString();
+            albunes += "\n";
+        }
+        return albunes;
     }
 }
