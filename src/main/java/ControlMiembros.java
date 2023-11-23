@@ -11,7 +11,7 @@ public class ControlMiembros {
     private HashMap<String, Miembro> miembros;
 
     ControlMiembros() {
-        this.miembros = new HashMap<String, Miembro>();
+        this.miembros = new HashMap<>();
     }
     /**
      * Agrega un nuevo miembro al controlador de miembros.
@@ -64,10 +64,7 @@ public class ControlMiembros {
     public boolean agregarInstrumento(String cedula, Instrumento instrumento) {
         Miembro miembro = buscarMiembro(cedula);
         if (miembro instanceof Miembro) {
-            if (miembro.agregarInstrumento(instrumento)) {
-                return true;
-            }
-            return false;
+            return miembro.agregarInstrumento(instrumento);
         }
         return false;
     }
@@ -81,10 +78,7 @@ public class ControlMiembros {
     public boolean agregarRol(String cedula, Rol rol) {
         Miembro miembro = buscarMiembro(cedula);
         if (miembro instanceof Miembro) {
-            if (miembro.agregarRol(rol)) {
-                return true;
-            }
-            return false;
+            return miembro.agregarRol(rol);
         }
         return false;
     }
@@ -124,4 +118,3 @@ public class ControlMiembros {
     }
 
 }
-
