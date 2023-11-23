@@ -1,3 +1,7 @@
+package ClasesEntidad;
+
+import ClasesEntidad.Instrumento;
+
 import java.util.ArrayList;
 import java.util.List;
 

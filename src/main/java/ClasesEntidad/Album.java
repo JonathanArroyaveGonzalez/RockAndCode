@@ -1,3 +1,5 @@
+package ClasesEntidad;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -31,6 +33,6 @@ public class Album {
 
     @Override
     public String toString() {
-        return "Album [nombre=" + nombre + ", fecha=" + fecha + "]";
+        return "ClasesEntidad.Album [nombre=" + nombre + ", fecha=" + fecha + "]";
     }
 }

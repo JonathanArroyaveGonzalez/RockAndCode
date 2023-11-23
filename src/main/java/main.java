@@ -4,9 +4,15 @@
  * @author Jonathan A.
  * @version 1.0
  */
+import ClasesEntidad.Banda;
+import Controles.ControlAlbum;
+import Controles.ControlCancion;
+import Controles.ControlConcierto;
+import Controles.ControlMiembros;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
-public class Main {
+public class main {
 
         public static void main(String[] args) {
 
@@ -25,7 +31,7 @@ public class Main {
             /**
              * Pruebas de funcionalidad B
              */
-            // Crear una instancia de ControlMiembros
+            // Crear una instancia de Controles.ControlMiembros
             ControlMiembros controlMiembros = new ControlMiembros();
 
             // Agregar miembros
@@ -37,7 +43,7 @@ public class Main {
 
             // Agregar roles e instrumentos a los miembros
             controlMiembros.agregarRol("123456789", "GUITARRISTA");
-            controlMiembros.agregarRol("987654321", "Rol.BAJISTA");
+            controlMiembros.agregarRol("987654321", "BAJISTA");
             controlMiembros.agregarInstrumento("123456789", "GUITARRA");
             controlMiembros.agregarInstrumento("987654321", "VIOLIN");
 
@@ -58,7 +64,7 @@ public class Main {
         /*
         Prueba de funcionalida D, E y F
          */
-            // Crear instancia de ControlAlbum
+            // Crear instancia de Controles.ControlAlbum
             ControlAlbum controlAlbum = new ControlAlbum();
 
             // Agregar un nuevo álbum
@@ -67,7 +73,7 @@ public class Main {
             // Imprimir información de álbumes antes de agregar canciones
             System.out.println("Álbumes antes de agregar canciones:\n" + controlAlbum.toString());
 
-            // Crear instancia de ControlCancion
+            // Crear instancia de Controles.ControlCancion
             ControlCancion controlCancion = new ControlCancion();
 
             // Agregar canciones al álbum
@@ -85,7 +91,7 @@ public class Main {
             /**
              * Prueba de Funcionalidad G y J
              */
-            // Crear instancia de ControlConcierto
+            // Crear instancia de Controles.ControlConcierto
             ControlConcierto controlConcierto = new ControlConcierto();
 
             // Programar conciertos

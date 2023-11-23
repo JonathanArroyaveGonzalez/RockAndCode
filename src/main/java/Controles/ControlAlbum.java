@@ -1,3 +1,6 @@
+package Controles;
+
+import ClasesEntidad.Album;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +12,7 @@ import java.util.Map;
  * @version 1.0
  */
 public class ControlAlbum {
-    private HashMap<String,Album> listaAlbunes;
+    private HashMap<String, Album> listaAlbunes;
 
     public ControlAlbum() {
         this.listaAlbunes = new HashMap<>();
@@ -32,7 +35,7 @@ public class ControlAlbum {
      * Consulta un álbum en el controlador por su nombre.
      *
      * @param nombreAlbum El nombre del álbum a consultar.
-     * @return El objeto Album correspondiente al nombre proporcionado, o null si no se encuentra.
+     * @return El objeto ClasesEntidad.Album correspondiente al nombre proporcionado, o null si no se encuentra.
      */
     public boolean consultarAlbum(String nombreAlbum) {
         Album albumBuscado=this.listaAlbunes.get(nombreAlbum);
@@ -73,7 +76,7 @@ public class ControlAlbum {
     @Override
     public String toString() {
         String albunes="";
-        for (Map.Entry<String,Album> entry : this.listaAlbunes.entrySet()) {
+        for (Map.Entry<String, Album> entry : this.listaAlbunes.entrySet()) {
             albunes += entry.getValue().toString();
             albunes += "\n";
         }

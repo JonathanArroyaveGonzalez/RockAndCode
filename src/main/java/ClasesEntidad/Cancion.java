@@ -1,3 +1,5 @@
+package ClasesEntidad;
+
 import java.time.LocalTime;
 
 /**

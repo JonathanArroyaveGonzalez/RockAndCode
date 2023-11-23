@@ -1,3 +1,5 @@
+package ClasesEntidad;
+
 /**
  * Descripcion de la Clase
  *

@@ -1,3 +1,7 @@
+package Controles;
+
+import ClasesEntidad.Cancion;
+
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -5,7 +9,7 @@ import java.util.Map;
 public class ControlCancion {
     private HashMap<String, Cancion>canciones;
 
-    ControlCancion() {
+    public ControlCancion() {
         this.canciones = new HashMap<>();
     }
 

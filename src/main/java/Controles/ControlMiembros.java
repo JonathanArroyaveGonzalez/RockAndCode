@@ -1,3 +1,9 @@
+package Controles;
+
+import ClasesEntidad.Instrumento;
+import ClasesEntidad.Miembro;
+import ClasesEntidad.Rol;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +16,7 @@ import java.util.Map;
 public class ControlMiembros {
     private HashMap<String, Miembro> miembros;
 
-    ControlMiembros() {
+    public ControlMiembros() {
         this.miembros = new HashMap<>();
     }
     /**
@@ -46,7 +52,7 @@ public class ControlMiembros {
      * Busca un miembro en el controlador de miembros por su cédula.
      *
      * @param cedula La cédula del miembro a buscar.
-     * @return Una instancia de Miembro si se encuentra, o null si no se encuentra.
+     * @return Una instancia de ClasesEntidad.Miembro si se encuentra, o null si no se encuentra.
      */
     public Miembro buscarMiembro(String cedula) {
         if (miembros.keySet().contains(cedula)) {
@@ -154,7 +160,7 @@ public class ControlMiembros {
     @Override
     public String toString() {
         String integrantes="";
-        for (Map.Entry<String,Miembro> entry : this.miembros.entrySet()) {
+        for (Map.Entry<String, Miembro> entry : this.miembros.entrySet()) {
             integrantes += entry.getValue().toString();
             integrantes += "\n";
         }

@@ -1,3 +1,5 @@
+package ClasesEntidad;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,7 @@ private List<String> fotos;
 
     @Override
     public String toString() {
+
         return "Informacion Rock&Code: \n" +
                 "Genero: " + genero + "\n" +
                 "Fecha de creacion: " + fechaCreacion + "\n"+
