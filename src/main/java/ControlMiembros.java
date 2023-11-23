@@ -61,7 +61,27 @@ public class ControlMiembros {
      * @param instrumento El instrumento a agregar.
      * @return true si el instrumento se agregó con éxito al miembro, false si el miembro no existe en el controlador o el instrumento ya está asignado al miembro.
      */
-    public boolean agregarInstrumento(String cedula, Instrumento instrumento) {
+    public boolean agregarInstrumento(String cedula, String pInstrumento) {
+
+        Instrumento instrumento;
+
+        switch (pInstrumento) {
+            case "BATERIA":
+                instrumento = Instrumento.BATERIA;
+                break;
+            case "GUITARRA":
+                instrumento = Instrumento.GUITARRA;
+                break;
+            case "PIANO":
+                instrumento = Instrumento.PIANO;
+                break;
+            case "VIOLIN":
+                instrumento = Instrumento.VIOLIN;
+                break;
+            default:
+                return false;
+        }
+
         Miembro miembro = buscarMiembro(cedula);
         return miembro instanceof Miembro && miembro.agregarInstrumento(instrumento);
     }
@@ -72,11 +92,37 @@ public class ControlMiembros {
      * @param rol    El rol a agregar.
      * @return true si el rol se agregó con éxito al miembro, false si el miembro no existe en el controlador o el rol ya está asignado al miembro.
      */
-    public boolean agregarRol(String cedula, Rol rol) {
+    public boolean agregarRol(String cedula, String pRol) {
+        Rol rol;
+
+        switch (pRol) {
+            case "GUITARRISTA":
+                rol = Rol.GUITARRISTA;
+                break;
+            case "VOCALISTA":
+                rol = Rol.VOCALISTA;
+                break;
+            case "BAJISTA":
+                rol = Rol.BAJISTA;
+                break;
+            case "BATERISTA":
+                rol = Rol.BATERISTA;
+                break;
+            case "TECLADISTA":
+                rol = Rol.TECLADISTA;
+                break;
+            case "MANAGER":
+                rol = Rol.MANAGER;
+                break;
+            default:
+                return false;
+        }
+
         Miembro miembro = buscarMiembro(cedula);
         if (miembro instanceof Miembro) {
             return miembro.agregarRol(rol);
         }
+
         return false;
     }
 
