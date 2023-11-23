@@ -1,6 +1,3 @@
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 /**
  * Descripcion de la Clase
  *
@@ -39,10 +36,10 @@ public class Main {
             System.out.println("Miembros antes de agregar roles e instrumentos:\n" + controlMiembros.toString());
 
             // Agregar roles e instrumentos a los miembros
-            controlMiembros.agregarRol("123456789", Rol.GUITARRISTA);
-            controlMiembros.agregarRol("987654321", Rol.BAJISTA);
-            controlMiembros.agregarInstrumento("123456789", Instrumento.GUITARRA);
-            controlMiembros.agregarInstrumento("987654321", Instrumento.VIOLIN);
+            controlMiembros.agregarRol("123456789", "GUITARRISTA");
+            controlMiembros.agregarRol("987654321", "Rol.BAJISTA");
+            controlMiembros.agregarInstrumento("123456789", "GUITARRA");
+            controlMiembros.agregarInstrumento("987654321", "VIOLIN");
 
             // Imprimir información de miembros después de agregar roles e instrumentos
             System.out.println("Miembros después de agregar roles e instrumentos:\n" + controlMiembros.toString());
@@ -100,4 +97,3 @@ public class Main {
 
         }
     }
-
