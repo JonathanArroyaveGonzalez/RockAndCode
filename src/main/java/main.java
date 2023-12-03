@@ -1,11 +1,11 @@
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 import ClasesEntidad.Banda;
 import Controles.ControlAlbum;
 import Controles.ControlCancion;
 import Controles.ControlConcierto;
 import Controles.ControlMiembros;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 /**
  * Descripcion de la Clase
@@ -13,8 +13,6 @@ import Controles.ControlMiembros;
  * @author Jonathan A.
  * @version 1.0
  */
-import java.time.LocalDate;
-import java.time.LocalTime;
 public class main {
 
         public static void main(String[] args) {
