@@ -1,18 +1,15 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /**
  * Descripcion de la Clase
  *
  * @author Jonathan A.
  * @version 1.0
  */
-import ClasesEntidad.Banda;
-import Controles.ControlAlbum;
-import Controles.ControlCancion;
-import Controles.ControlConcierto;
-import Controles.ControlMiembros;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
-public class main {
+public class Main {
 
         public static void main(String[] args) {
 
@@ -31,7 +28,7 @@ public class main {
             /**
              * Pruebas de funcionalidad B
              */
-            // Crear una instancia de Controles.ControlMiembros
+            // Crear una instancia de ControlMiembros
             ControlMiembros controlMiembros = new ControlMiembros();
 
             // Agregar miembros
@@ -64,7 +61,7 @@ public class main {
         /*
         Prueba de funcionalida D, E y F
          */
-            // Crear instancia de Controles.ControlAlbum
+            // Crear instancia de ControlAlbum
             ControlAlbum controlAlbum = new ControlAlbum();
 
             // Agregar un nuevo álbum
@@ -73,7 +70,7 @@ public class main {
             // Imprimir información de álbumes antes de agregar canciones
             System.out.println("Álbumes antes de agregar canciones:\n" + controlAlbum.toString());
 
-            // Crear instancia de Controles.ControlCancion
+            // Crear instancia de ControlCancion
             ControlCancion controlCancion = new ControlCancion();
 
             // Agregar canciones al álbum
@@ -91,7 +88,7 @@ public class main {
             /**
              * Prueba de Funcionalidad G y J
              */
-            // Crear instancia de Controles.ControlConcierto
+            // Crear instancia de ControlConcierto
             ControlConcierto controlConcierto = new ControlConcierto();
 
             // Programar conciertos
@@ -103,3 +100,4 @@ public class main {
 
         }
     }
+
