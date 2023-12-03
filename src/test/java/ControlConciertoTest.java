@@ -65,12 +65,12 @@ class ControlConciertoTest {
     @Test
     void testGuardarValor() {
         ControlConcierto controlConcierto1 = new ControlConcierto();
+        String resultado = controlConcierto1.consultarConciertos();
         controlConcierto1.programarConcierto("Yupiter", "la luna", LocalDate.of(2023, 12, 1),
                 LocalTime.of(20, 0), 1000,
                 "CODIGO1");
-        String resultado = controlConcierto1.consultarConciertos();
         String valor = controlConcierto1.consultarConciertos();
-        assertEquals(valor, resultado);
+        assertNotEquals(valor, resultado);
     }
 
     @Test
