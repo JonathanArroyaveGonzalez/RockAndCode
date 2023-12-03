@@ -6,6 +6,14 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
 
+/**
+ * ControlConcierto es una clase que gestiona y mantiene un conjunto de conciertos programados.
+ * Permite programar nuevos conciertos, consultar la información de todos los conciertos programados,
+ * y proporciona métodos para comparar instancias y generar representaciones en formato de cadena.
+ *
+ * @author Jonathan A, Juan J Morales.
+ * @version 1.0
+ */
 public class ControlConcierto {
     private HashMap<String, Concierto> conciertos;
 

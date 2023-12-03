@@ -8,9 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Descripcion de la Clase
+ * ControlMiembros es una clase que gestiona y mantiene un conjunto de miembros.
+ * Permite agregar nuevos miembros, eliminar miembros, buscar miembros por cédula,
+ * y asignar instrumentos y roles a los miembros existentes.
+ * Además, proporciona métodos para comparar instancias y generar representaciones en formato de cadena.
  *
- * @author Jonathan A.
+ * @author Jonathan A, Juan J Morales.
  * @version 1.0
  */
 public class ControlMiembros {
@@ -50,7 +53,6 @@ public class ControlMiembros {
     }
     /**
      * Busca un miembro en el controlador de miembros por su cédula.
-     *
      * @param cedula La cédula del miembro a buscar.
      * @return Una instancia de ClasesEntidad.Miembro si se encuentra, o null si no se encuentra.
      */
@@ -62,9 +64,8 @@ public class ControlMiembros {
     }
     /**
      * Agrega un instrumento a un miembro existente en el controlador de miembros.
-     *
      * @param cedula      La cédula del miembro.
-     * @param instrumento El instrumento a agregar.
+     * @param pInstrumento El instrumento a agregar.
      * @return true si el instrumento se agregó con éxito al miembro, false si el miembro no existe en el controlador o el instrumento ya está asignado al miembro.
      */
     public boolean agregarInstrumento(String cedula, String pInstrumento) {
@@ -95,7 +96,7 @@ public class ControlMiembros {
      * Agrega un rol a un miembro existente en el controlador de miembros.
      *
      * @param cedula La cédula del miembro.
-     * @param rol    El rol a agregar.
+     * @param pRol    El rol a agregar.
      * @return true si el rol se agregó con éxito al miembro, false si el miembro no existe en el controlador o el rol ya está asignado al miembro.
      */
     public boolean agregarRol(String cedula, String pRol) {

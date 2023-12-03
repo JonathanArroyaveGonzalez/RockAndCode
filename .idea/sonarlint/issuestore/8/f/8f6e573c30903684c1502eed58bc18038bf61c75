@@ -1,14 +1,0 @@
-
-0
-java:S1220""Move this file to a named package.
-A
-java:S1068	",Remove this unused "idBoleto" private field.(ÃºÇ!
-F
-java:S1068
-"1Remove this unused "numeroAsiento" private field.(éŞ„k
-D
-java:S1068")Remove this unused "valor" private field.(£Òºûÿÿÿÿ
-E
-java:S1068"/Remove this unused "fechaCompra" private field.(½ÊàÏ
-G
-java:S1068"1Remove this unused "cedulaCliente" private field.(Õê€õ

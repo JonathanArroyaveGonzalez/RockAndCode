@@ -5,7 +5,14 @@ import ClasesEntidad.Cancion;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * ControlCancion es una clase que gestiona y mantiene un conjunto de canciones.
+ * Permite agregar nuevas canciones, eliminar canciones y consultar las canciones asociadas a un álbum.
+ * Además, proporciona métodos para comparar instancias y generar representaciones en formato de cadena.
+ *
+ * @author Jonathan A, Juan J Morales.
+ * @version 1.0
+ */
 public class ControlCancion {
     private HashMap<String, Cancion>canciones;
 
@@ -39,17 +46,26 @@ public class ControlCancion {
     }
 
     /**
-     * Agrega una nueva canción al controlador de canciones.
+     * Agrega una nueva canción.
      *
-     * @param nombre El nombre de la canción.
-     * @param duracion La duración de la canción.
-     * @param nombreAlbum El nombre del álbum al que pertenece la canción.
+     * @param nombre El nombre de la canción. No puede ser nulo o una cadena vacía.
+     * @param duracion La duración de la canción. No puede ser nula.
+     * @param nombreAlbum El nombre del álbum al que pertenece la canción. No puede ser nulo o una cadena vacía.
      * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
+     * @throws IllegalArgumentException Si alguno de los argumentos es nulo o una cadena vacía. También se lanza si ya existe una canción con el mismo nombre.
      */
     public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
+
+        if (nombre == null || duracion == null || nombreAlbum == null || nombre.isEmpty() || nombreAlbum.isEmpty()) {
+            throw new IllegalArgumentException("Argumentos inválidos: nombre, duracion y nombreAlbum no pueden ser nulos o cadenas vacías.");
+        }
+
+        if (this.canciones.containsKey(nombre)) {
+            throw new IllegalArgumentException("Ya existe una canción con el mismo nombre.");
+        }
         Cancion nuevaCancion = new Cancion(nombre, duracion, nombreAlbum);
         this.canciones.put(nombre, nuevaCancion);
-        return this.canciones.get(nombre) != null;
+        return this.canciones.get(nombre)!= null;
     }
     /**
      * Elimina una canción del controlador de canciones.
