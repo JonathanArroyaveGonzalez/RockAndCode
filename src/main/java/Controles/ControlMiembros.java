@@ -77,7 +77,7 @@ public class ControlMiembros {
      * Agrega un instrumento a un miembro existente en los miembros.
      *
      * @param cedula      String de la cédula del miembro.
-     * @param instrumento El instrumento a agregar.
+     * @param pInstrumento El instrumento a agregar.
      * @return true si el instrumento se agregó con éxito al miembro,
      *         false si:
      *                  el miembro con esa cedula no existe en los miembros,

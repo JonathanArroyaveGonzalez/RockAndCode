@@ -30,7 +30,7 @@ public class Miembro {
      *
      * Agrega un rol a un miembro.
      *
-     * @param rol String del rol a agregar.
+     * @param rol String de la ENUMERACIÓN del rol a agregar.
      * @return true si el rol se agregó con éxito al miembro,
      *         false si el rol ya está asignado al miembro.
      */
@@ -46,7 +46,7 @@ public class Miembro {
     /**
      *  Agrega un instrumento a un miembro.
      *
-     * @param instrumento String del instrumento a agregar.
+     * @param instrumento String  de la ENUMERACIÓN del instrumento a agregar.
      * @return true si el instrumento se agrego con exito al miembro
      *          false si el instrumento ya esta asignado al miembro
      */
