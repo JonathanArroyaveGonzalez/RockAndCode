@@ -115,7 +115,7 @@ public class ControlMiembrosTest {
                 "Cedula: 110000\r\n" + //
                 "Direccion: Cr24 #14-16\r\n" + //
                 "Roles:\r\n" + //
-                "Instrumentos:\\r\\n";
+                "Instrumentos:\n";
         assertEquals(valor, resultado);
     }
 
