@@ -1,6 +1,12 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import ClasesEntidad.Banda;
+import Controles.ControlAlbum;
+import Controles.ControlCancion;
+import Controles.ControlConcierto;
+import Controles.ControlMiembros;
+
 /**
  * Descripcion de la Clase
  *
@@ -9,7 +15,7 @@ import java.time.LocalTime;
  */
 import java.time.LocalDate;
 import java.time.LocalTime;
-public class Main {
+public class main {
 
         public static void main(String[] args) {
 
@@ -100,4 +106,3 @@ public class Main {
 
         }
     }
-

@@ -32,7 +32,7 @@ public class ControlConcierto {
         if (nombre == null || nombre.isEmpty() || lugar == null || lugar.isEmpty() || codigo == null || codigo.isEmpty()
                 || fecha == null || hora == null) {
             throw new IllegalArgumentException("Nombre, lugar, codigo, fecha u hora no puede ser de valor nulo");
-        } else if (fecha.getYear() < 1900) {
+        } else if (fecha.getYear() <= 1900) {
             throw new IllegalArgumentException("La fecha no puede ser menor a el año 1900");
         } else if (capacidad <= 0) {
             throw new IllegalArgumentException("La cantidad no puede ser menor o igual a cero");
