@@ -8,12 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ControlMiembros es una clase que gestiona y mantiene un conjunto de miembros.
- * Permite agregar nuevos miembros, eliminar miembros, buscar miembros por cédula,
- * y asignar instrumentos y roles a los miembros existentes.
- * Además, proporciona métodos para comparar instancias y generar representaciones en formato de cadena.
+ * Descripcion de la Clase
  *
- * @author Jonathan A, Juan J Morales.
+ * @author Jonathan A.
  * @version 1.0
  */
 public class ControlMiembros {
@@ -22,15 +19,23 @@ public class ControlMiembros {
     public ControlMiembros() {
         this.miembros = new HashMap<>();
     }
+
     /**
-     * Agrega un nuevo miembro al controlador de miembros.
+     * Agrega un nuevo miembro a los miembros.
+     * Laza IllegalArgumentException si el nombre, cedula o direccion son nulos o vacios
      *
-     * @param nombre    El nombre del miembro.
+     * @param nombre    El nombre completo del miembro.
      * @param cedula    La cédula del miembro.
      * @param direccion La dirección del miembro.
-     * @return true si el miembro se agregó con éxito, false si ya existe un miembro con la misma cédula.
+     * @return true si el miembro se agregó con éxito, false si ya existe un miembro
+     *         con la misma cédula.
      */
     public boolean agregarMiembro(String nombre, String cedula, String direccion) {
+        if (nombre == null || nombre.isEmpty() || cedula == null || cedula.isEmpty() || direccion == null
+                || direccion.isEmpty()) {
+            throw new IllegalArgumentException("Nombre, cedula o direccion nulos");
+        }
+
         if (buscarMiembro(cedula) instanceof Miembro) {
             return false;
         }
@@ -38,11 +43,13 @@ public class ControlMiembros {
         miembros.put(cedula, miembro);
         return true;
     }
+
     /**
-     * Elimina un miembro del controlador de miembros.
+     * Elimina un miembro de los miembros.
      *
-     * @param cedula La cédula del miembro a eliminar.
-     * @return true si el miembro se eliminó con éxito, false si el miembro no existe en el controlador.
+     * @param cedula String de la cédula del miembro a eliminar.
+     * @return true si el miembro se eliminó con éxito, false si el miembro no
+     *         existe en memoria.
      */
     public boolean eliminarMiembro(String cedula) {
         if (buscarMiembro(cedula) instanceof Miembro) {
@@ -51,10 +58,13 @@ public class ControlMiembros {
         }
         return false;
     }
+
     /**
-     * Busca un miembro en el controlador de miembros por su cédula.
-     * @param cedula La cédula del miembro a buscar.
-     * @return Una instancia de ClasesEntidad.Miembro si se encuentra, o null si no se encuentra.
+     * Busca un miembro en los miembros por su cédula.
+     *
+     * @param cedula String de la cédula del miembro a buscar.
+     * @return Una instancia de ClasesEntidad.Miembro si se encuentra, o null si no
+     *         se encuentra.
      */
     public Miembro buscarMiembro(String cedula) {
         if (miembros.keySet().contains(cedula)) {
@@ -62,11 +72,16 @@ public class ControlMiembros {
         }
         return null;
     }
+
     /**
-     * Agrega un instrumento a un miembro existente en el controlador de miembros.
-     * @param cedula      La cédula del miembro.
-     * @param pInstrumento El instrumento a agregar.
-     * @return true si el instrumento se agregó con éxito al miembro, false si el miembro no existe en el controlador o el instrumento ya está asignado al miembro.
+     * Agrega un instrumento a un miembro existente en los miembros.
+     *
+     * @param cedula      String de la cédula del miembro.
+     * @param instrumento El instrumento a agregar.
+     * @return true si el instrumento se agregó con éxito al miembro,
+     *         false si:
+     *                  el miembro con esa cedula no existe en los miembros,
+     *                  el instrumento ya está asignado al miembro.
      */
     public boolean agregarInstrumento(String cedula, String pInstrumento) {
 
@@ -92,12 +107,16 @@ public class ControlMiembros {
         Miembro miembro = buscarMiembro(cedula);
         return miembro instanceof Miembro && miembro.agregarInstrumento(instrumento);
     }
+
     /**
-     * Agrega un rol a un miembro existente en el controlador de miembros.
+     * Agrega un rol a un miembro existente en los miembros.
      *
-     * @param cedula La cédula del miembro.
-     * @param pRol    El rol a agregar.
-     * @return true si el rol se agregó con éxito al miembro, false si el miembro no existe en el controlador o el rol ya está asignado al miembro.
+     * @param cedula String de la cédula del miembro.
+     * @param rol    El rol a agregar.
+     * @return true si el rol se agregó con éxito al miembro,
+     *         false si
+     *                  el miembro no existe en los miembros.
+     *                  el rol ya está asignado al miembro.
      */
     public boolean agregarRol(String cedula, String pRol) {
         Rol rol;
@@ -129,7 +148,6 @@ public class ControlMiembros {
         if (miembro instanceof Miembro) {
             return miembro.agregarRol(rol);
         }
-
         return false;
     }
 
@@ -160,7 +178,7 @@ public class ControlMiembros {
 
     @Override
     public String toString() {
-        String integrantes="";
+        String integrantes = "";
         for (Map.Entry<String, Miembro> entry : this.miembros.entrySet()) {
             integrantes += entry.getValue().toString();
             integrantes += "\n";
