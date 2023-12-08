@@ -11,12 +11,10 @@ import java.time.LocalTime;
 public class Cancion {
     private String nombre;
     private LocalTime duracion;
-    private String album;
 
-    public Cancion(String nombre, LocalTime duracion, String album) {
+    public Cancion(String nombre, LocalTime duracion) {
         this.nombre = nombre;
         this.duracion = duracion;
-        this.album = album;
     }
 
     public String getNombre() {
@@ -37,7 +35,7 @@ public class Cancion {
 
     @Override
     public String toString() {
-        return "nombre: " + nombre + ", duracion: " + duracion + ", Album: " + album + "\n";
+        return "nombre: " + nombre + ", duracion: " + duracion;
     }
 
 

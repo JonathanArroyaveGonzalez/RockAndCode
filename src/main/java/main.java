@@ -1,4 +1,7 @@
 import ClasesEntidad.Banda;
+import ClasesFrontera.MenuAlbum;
+import ClasesFrontera.MenuBanda;
+import ClasesFrontera.MenuMiembros;
 import Controles.ControlAlbum;
 import Controles.ControlCancion;
 import Controles.ControlConcierto;
@@ -16,7 +19,13 @@ import java.time.LocalTime;
 public class main {
 
         public static void main(String[] args) {
-
+            MenuBanda menu= new MenuBanda();
+            menu.iniciarMenu();
+            MenuMiembros menu1 = new MenuMiembros();
+            //menu1.menuMiembros();
+            MenuAlbum menuAlbum=new MenuAlbum();
+            //menuAlbum.menuAlbum();
+/**
             //Prueba Funcionalidad (A)
             Banda miBanda = new Banda();
             System.out.println(miBanda.toString());
@@ -29,9 +38,7 @@ public class main {
             System.out.println("Informacion sin fotos: \n" + miBanda.toString());
 
 
-            /**
-             * Pruebas de funcionalidad B
-             */
+
             // Crear una instancia de ControlMiembros
             ControlMiembros controlMiembros = new ControlMiembros();
 
@@ -58,13 +65,8 @@ public class main {
             System.out.println("Miembros después de eliminar un miembro:\n" + controlMiembros.toString());
 
 
-            /**
-             * Prueba de funcionalidad C se valida mediante los print Anteriores
-             */
 
-        /*
-        Prueba de funcionalida D, E y F
-         */
+
             // Crear instancia de ControlAlbum
             ControlAlbum controlAlbum = new ControlAlbum();
 
@@ -89,9 +91,7 @@ public class main {
             System.out.println("Canciones del álbum 'Mi Primer Album':\n" + cancionesXAlbum);
 
 
-            /**
-             * Prueba de Funcionalidad G y J
-             */
+
             // Crear instancia de ControlConcierto
             ControlConcierto controlConcierto = new ControlConcierto();
 
@@ -101,6 +101,6 @@ public class main {
 
             // Imprimir información de conciertos
             System.out.println("Información de conciertos:" + controlConcierto.consultarConciertos());
-
+*/
         }
     }

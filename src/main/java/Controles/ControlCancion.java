@@ -54,6 +54,7 @@ public class ControlCancion {
      * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
      * @throws IllegalArgumentException Si alguno de los argumentos es nulo o una cadena vacía. También se lanza si ya existe una canción con el mismo nombre.
      */
+
     public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
 
         if (nombre == null || duracion == null || nombreAlbum == null || nombre.isEmpty() || nombreAlbum.isEmpty()) {
@@ -63,7 +64,7 @@ public class ControlCancion {
         if (this.canciones.containsKey(nombre)) {
             throw new IllegalArgumentException("Ya existe una canción con el mismo nombre.");
         }
-        Cancion nuevaCancion = new Cancion(nombre, duracion, nombreAlbum);
+        Cancion nuevaCancion = new Cancion(nombre, duracion);
         this.canciones.put(nombre, nuevaCancion);
         return this.canciones.get(nombre)!= null;
     }

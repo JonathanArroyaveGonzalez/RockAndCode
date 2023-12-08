@@ -1,0 +1,29 @@
+# Maven specific
+target/
+pom.xml.*
+release.properties
+pom.xml.releaseBackup
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+
+# IntelliJ specific
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# NetBeans specific
+nbproject/private/
+build/
+
+# Visual Studio Code specific
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db

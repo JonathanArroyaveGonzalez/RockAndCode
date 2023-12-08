@@ -1,7 +1,10 @@
 package Controles;
 
 import ClasesEntidad.Album;
+import ClasesEntidad.Cancion;
+
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,6 +61,33 @@ public class ControlAlbum {
         {
             return false;
         }
+    }
+
+    /**
+     * Agrega una nueva canción.
+     *
+     * @param nombre El nombre de la canción. No puede ser nulo o una cadena vacía.
+     * @param duracion La duración de la canción. No puede ser nula.
+     * @param nombreAlbum El nombre del álbum al que pertenece la canción. No puede ser nulo o una cadena vacía.
+     * @return true si la canción se agregó con éxito, false si no se pudo agregar (por ejemplo, si ya existe una canción con el mismo nombre).
+     * @throws IllegalArgumentException Si alguno de los argumentos es nulo o una cadena vacía. También se lanza si ya existe una canción con el mismo nombre.
+     */
+
+    public boolean agregarCancion(String nombre, LocalTime duracion, String nombreAlbum) {
+
+        if (nombre == null || duracion == null || nombreAlbum == null || nombre.isEmpty() || nombreAlbum.isEmpty()) {
+            throw new IllegalArgumentException("Argumentos inválidos: nombre, duracion y nombreAlbum no pueden ser nulos o cadenas vacías.");
+        }
+
+        Album albumBuscado=this.listaAlbunes.get(nombreAlbum);
+        Cancion nuevaCancion= new Cancion(nombre, duracion);
+
+        return albumBuscado.agregarCancion(nuevaCancion);
+    }
+
+    public String consultarCancionesDeAlbum(String nombreAlbum){
+        Album albumBuscado=this.listaAlbunes.get(nombreAlbum);
+        return albumBuscado.infoCanciones();
     }
 
 

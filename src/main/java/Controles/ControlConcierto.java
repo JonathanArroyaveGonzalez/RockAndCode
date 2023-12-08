@@ -5,7 +5,16 @@ import ClasesEntidad.Concierto;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
-
+/**
+ * Permite gestionar la información de los conciertos, como programar nuevos conciertos,
+ * buscar conciertos por código y consultar la información de todos los conciertos programados.
+ *
+ * Esta clase utiliza un HashMap para almacenar los conciertos, donde la clave es el código del concierto.
+ * Se proporcionan métodos para realizar operaciones sobre estos conciertos, como programar y buscar.
+ *
+ * @version 1.0
+ * @author Jonathan A, Juan J Morales.
+ */
 public class ControlConcierto {
     private HashMap<String, Concierto> conciertos;
 

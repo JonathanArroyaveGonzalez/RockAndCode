@@ -8,10 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Descripcion de la Clase
+ * Permite gestionar la información de los miembros, como agregar o eliminar miembros,
+ * buscar miembros por cédula, agregar instrumentos y roles a los miembros, entre otras funciones.
  *
- * @author Jonathan A.
+ * Esta clase utiliza un HashMap para almacenar los miembros, donde la clave es la cédula del miembro.
+ * Se proporcionan métodos para realizar operaciones sobre estos miembros, como agregar y eliminar,
+ * así como buscar miembros, asignar instrumentos y roles.
+ *
  * @version 1.0
+ * @author Jonathan A, Juan J Morales.
  */
 public class ControlMiembros {
     private HashMap<String, Miembro> miembros;
@@ -37,7 +42,7 @@ public class ControlMiembros {
         }
 
         if (buscarMiembro(cedula) instanceof Miembro) {
-            return false;
+            throw new IllegalArgumentException("¡Error! se encontro un miembro registrado con la cedula ingresada.");
         }
         Miembro miembro = new Miembro(nombre, cedula, direccion);
         miembros.put(cedula, miembro);
@@ -112,7 +117,7 @@ public class ControlMiembros {
      * Agrega un rol a un miembro existente en los miembros.
      *
      * @param cedula String de la cédula del miembro.
-     * @param rol    El rol a agregar.
+     * @param pRol    El rol a agregar.
      * @return true si el rol se agregó con éxito al miembro,
      *         false si
      *                  el miembro no existe en los miembros.
@@ -122,6 +127,7 @@ public class ControlMiembros {
         Rol rol;
 
         switch (pRol) {
+
             case "GUITARRISTA":
                 rol = Rol.GUITARRISTA;
                 break;
