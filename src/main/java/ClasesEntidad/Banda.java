@@ -1,5 +1,8 @@
 package ClasesEntidad;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +17,7 @@ private String genero;
 private String fechaCreacion;
 private List<String> fotos;
 
-    public Banda(String genero,String fechaCreacion) {
+public Banda(String genero, String fechaCreacion) {
         this.genero = genero;
         this.fechaCreacion = fechaCreacion;
         this.fotos = new ArrayList<>();
