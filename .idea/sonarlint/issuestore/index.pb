@@ -95,3 +95,23 @@ L
 doc/ControlMiembrosTest.html,8\e\8eee563cb88513fe74dacdda52fc5250576ba29b
 K
 doc/ControlCancionTest.html,7\e\7ed9947df51ccff7a743c7ab32eaf48fa784afb4
+S
+#src/test/java/ControlAlbumTest.java,6\d\6de0a408753e8a4770d1975d5badf84e806bba96
+U
+%src/test/java/ControlCancionTest.java,4\d\4dc8a3cd546b2ca00b713474957d8484f231b311
+W
+'src/test/java/ControlConciertoTest.java,b\c\bc8c3a601622af1ed9bb982f4238f0e119d21a8e
+V
+&src/test/java/ControlMiembrosTest.java,0\7\072426c98bf4b624ce223086a1910a068c84779a
+O
+src/test/java/MiembrosTest.java,6\5\65a321585195e1a69fd377f74bb1abf58394c698
+V
+&src/main/java/ClasesEntidad/Banda.java,9\9\998f03e5a2a16b53594f3868f810aa9a04caefa2
+X
+(src/main/java/ClasesEntidad/Miembro.java,2\1\21d48a3ad961bac49f251741b7f514d968cce19c
+X
+(src/main/java/ClasesEntidad/Cancion.java,c\5\c5044d3bffb9af74890a1205d646c0c67ced54e6
+[
++src/main/java/Controles/ControlCancion.java,9\2\92afd2feccb5fbab8f799cf78ea6199e0447ef0a
+\
+,src/main/java/Controles/ControlMiembros.java,6\6\66f306e9955878e8145525c3d4ca633a926c9e3e

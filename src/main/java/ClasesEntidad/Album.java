@@ -26,7 +26,7 @@ public class Album {
 
 
     public boolean agregarCancion(Cancion cancion) {
-        if (this.canciones.containsKey(nombre)) {
+        if (this.canciones.containsKey(cancion.getNombre())) {
             return false;
         }else
         {

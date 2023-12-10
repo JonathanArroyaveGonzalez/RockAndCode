@@ -80,6 +80,10 @@ public class ControlAlbum {
         }
 
         Album albumBuscado=this.listaAlbunes.get(nombreAlbum);
+        if(albumBuscado==null){
+            throw new IllegalArgumentException("¡ERROR! no se encontro el un album con el nombre ingresado.");
+
+        }
         Cancion nuevaCancion= new Cancion(nombre, duracion);
 
         return albumBuscado.agregarCancion(nuevaCancion);
